@@ -1,16 +1,29 @@
-﻿var name = "Ewa";
-var sex = "Kobieta";
-var sexm = "Mężczyzna";
-var age = 30;
-//var age2 = 30;
-//var age3 = 33;
+﻿using System.ComponentModel.Design;
 
-if (sex == "Kobieta" && age - 1 < 30)
-    Console.WriteLine("Kobieta poniżej 30 lat");
-if (name == "Ewa" && age + 3 == 33)
-    Console.WriteLine("Ewa, lat 33");
-if (age - 13 < 18 && sexm != "Kobieta")
-    Console.WriteLine("Niepełnoletni Mężczyzna");
-if (age - 13 > 18 && sexm == "Mężczyzna")
-    Console.WriteLine("Pełnoletni Mężczyzna");
-else Console.WriteLine("*KONIEC*");
+var name = "Ewa";
+var sex = "K";
+var age = 50;
+
+if (sex == "K")
+{
+    if (age == 33 && name == "Ewa")
+        Console.WriteLine("Ewa, lat 33");
+    else if (age > 18)
+        Console.WriteLine("Pełnoletnia kobieta");
+    if (age < 30)
+        Console.WriteLine("Kobieta poniżej 30 Lat");
+    else if (age < 18)
+        Console.WriteLine("Niepełnoletnia kobieta");
+    
+}
+else if (sex !="K")
+{
+    if (age < 18)
+        Console.WriteLine("Niepełnoletni Mężczyna");
+    else if(age > 18) 
+        Console.WriteLine("Pełnoletni mężczyna");
+}
+
+
+
+
