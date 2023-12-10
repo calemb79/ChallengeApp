@@ -1,129 +1,66 @@
-﻿/*using System.ComponentModel.Design;
+﻿using System;
+using System.ComponentModel.Design;
 
-var name = "Ewa";
-bool sex = true;
-var age = 30;
+int number = 200351;
+string numberString = number.ToString();
+char[] numberChar = numberString.ToCharArray();
+int[] figure = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
-if (sex == true)
+
+for (int i = 0; i < numberChar.Length; i++)
+
 {
-    if (age == 33 && name == "Ewa")
+
+    if (numberChar[i] == '0')
     {
-        Console.WriteLine("Ewa, lat 33");
+        figure[0]++;
     }
-    else if (age < 30)
-    { 
-        Console.WriteLine("Kobieta poniżej 30 Lat"); 
-    }
-    else
+    else if (numberChar[i] == '1')
     {
-        Console.WriteLine("inna kobieta");
+        figure[1]++;
     }
-
-
-}
-else if (sex !=true)
-{
-    if (age < 18)
+    else if (numberChar[i] == '2')
     {
-        Console.WriteLine("Niepełnoletni Mężczyna");
+        figure[2]++;
     }
-    else if (age > 18)
+    else if (numberChar[i] == '3')
     {
-        Console.WriteLine("Pełnoletni mężczyna");
+        figure[3]++;
     }
-    
-        
-}
-*/
-
-
-int number = 1712154;
-string change = number.ToString();
-char[] change2 = change.ToArray();
-
-
-List<char> numbers = new List<char>();
-numbers.Add('0');
-numbers.Add('1');
-numbers.Add('2');
-numbers.Add('3');
-numbers.Add('4');
-numbers.Add('5');
-numbers.Add('6');
-numbers.Add('7');
-numbers.Add('8');
-numbers.Add('9');
-
-Console.Write("Wynik dla liczby " + number + "\n");
-
-foreach (var search in numbers)
-{
-    int zmienna = 0;
-
-    foreach (char c in change2)
+    else if (numberChar[i] == '4')
     {
-        if (c == search)
-        {
-            zmienna++;
-        }
+        figure[4]++;
     }
-
-    //Console.WriteLine("Liczba {0} występuje {1} razy.", search, licz);
-
-    string x = "raz";
-
-    if (zmienna != 1)
+    else if (numberChar[i] == '5')
     {
-
-        Console.WriteLine(search + " występuje => " + zmienna + " " + x + "y");
+        figure[5]++;
     }
-    else
+    else if (numberChar[i] == '6')
     {
-        Console.WriteLine(search + " występuje => " + zmienna + " " + x);
+        figure[6]++;
+    }
+    else if (numberChar[i] == '7')
+    {
+        figure[7]++;
+    }
+    else if (numberChar[i] == '8')
+    {
+        figure[8]++;
+    }
+    else if (numberChar[i] == '9')
+    {
+        figure[9]++;
     }
 }
+Console.WriteLine("W liczbie " + number);
+Console.WriteLine("cyfra 0 występuję" + figure[0]);
+Console.WriteLine("cyfra 1 występuję" + figure[1]);
+Console.WriteLine("cyfra 2 występuję" + figure[2]);
+Console.WriteLine("cyfra 3 występuję" + figure[3]);
+Console.WriteLine("cyfra 4 występuję" + figure[4]);
+Console.WriteLine("cyfra 5 występuję" + figure[5]);
+Console.WriteLine("cyfra 6 występuję" + figure[6]);
+Console.WriteLine("cyfra 7 występuję" + figure[7]);
+Console.WriteLine("cyfra 8 występuję" + figure[8]);
+Console.WriteLine("cyfra 9 występuję" + figure[9]);
 
-
-//int number = 1712154;
-//string change = number.ToString();
-//char[] change2 = change.ToArray();
-
-
-//List<char> numbers = new List<char>();
-//numbers.Add('0');
-//numbers.Add('1');
-//numbers.Add('2');
-//numbers.Add('3');
-//numbers.Add('4');
-//numbers.Add('5');
-//numbers.Add('6');
-//numbers.Add('7');
-//numbers.Add('8');
-//numbers.Add('9');
-
-//Console.Write("Wynik dla liczby " + number + "\n");
-
-//string[] teksty = { "zero", "jeden", "dwa", "trzy", "cztery", "pięć", "sześć", "siedem", "osiem", "dziewięć" };
-
-//foreach (var search in numbers)
-//{
-//    int zmienna = 0;
-//    foreach (char c in change2)
-//    {
-//        if (c == search)
-//        {
-//            zmienna++;
-//        }
-//    }
-
-//    //string x = "raz";
-//    string text = zmienna.ToString();
-//    if (zmienna != 1)
-//    {
-//        Console.WriteLine(teksty[int.Parse(search.ToString())] + " występuje => " + text );
-//    }
-//    else
-//    {
-//        Console.WriteLine(teksty[int.Parse(search.ToString())] + " występuje => " + text );
-//    }
-//}
